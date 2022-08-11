@@ -1,0 +1,18 @@
+<clr-modal [clrModalOpen]="display">
+  <h3 class="modal-title">Add a new Role</h3>
+  <div class="modal-body">
+    <clr-input-container>
+      <label for="role">Role</label>
+      <input
+        #roleInput
+        clrInput
+        type="text"
+        id="role"
+        placeholder="Enter role name"
+      />
+    </clr-input-container>
+  </div>
+  <div class="modal-footer">
+    <button (click)="addRole(roleInput.value)" class="btn btn-success">Add Role</button>
+  </div>
+</clr-modal>
