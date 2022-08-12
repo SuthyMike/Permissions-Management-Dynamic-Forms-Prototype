@@ -1,0 +1,13 @@
+<form clrForm [formGroup]="form">
+<clr-input-container>
+  <label for="inputElement.key">{{ inputElement.label }}</label>
+  <input
+    #inputEl
+    clrInput
+    type="inputElement.type"
+    id="inputElement.key"
+    [formControlName]="inputElement.key"
+    placeholder="{{ inputElement.typeOptions?.placeholder }}"
+  />
+</clr-input-container>
+</form>

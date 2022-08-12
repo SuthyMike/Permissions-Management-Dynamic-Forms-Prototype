@@ -1,0 +1,10 @@
+<h2>Permission Management</h2>
+<form clrForm [formGroup]="form">
+  <flix-generic-button
+    [buttonOptions]="buttonElement"
+    (buttonClicked)="handleButtonClicked()">
+  </flix-generic-button>
+  <flix-permissions-table [datagridColumns]="datagridColumns" [datagridRows]="datagridRows" [form]="form"></flix-permissions-table>
+</form>
+<flix-new-role-modal *ngIf="displayNewRoleModal" [form]="form" [display]="displayNewRoleModal" [modalElements]="modalElements"></flix-new-role-modal>
+

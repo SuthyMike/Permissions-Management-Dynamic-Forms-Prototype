@@ -1,0 +1,19 @@
+<clr-modal *ngIf="display" [(clrModalOpen)]="display">
+  <h3 class="modal-title">Add a new Role</h3>
+  <div class="modal-body">
+    <form clrForm [formGroup]="form" clrLayout="horizontal">
+      <ng-container *ngFor="let element of modalElements">
+        <ng-container *ngIf="element.controlType === 'input-control'">
+            <flix-generic-input [inputElement]="element" [form]="form"></flix-generic-input>
+        </ng-container>
+      </ng-container>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <ng-container *ngFor="let element of modalElements">
+      <ng-container *ngIf="element.controlType === 'button-control'">
+        <flix-generic-button type="submit" [form]="form" (buttonClicked)="handleButtonClicked()" [buttonOptions]="element"></flix-generic-button>
+      </ng-container>
+    </ng-container>
+  </div>
+</clr-modal>

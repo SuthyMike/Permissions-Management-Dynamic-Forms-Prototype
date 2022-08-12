@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { FormControlService } from 'src/app/form-control.service';
 import { DatagridColumn } from 'src/app/models/datagrid-column';
 
@@ -9,6 +10,8 @@ import { DatagridColumn } from 'src/app/models/datagrid-column';
 export class NewRoleModalComponent implements OnInit {
 
   @Input() public display!: boolean;
+  @Input() public modalElements!: any;
+  @Input() public form!: FormGroup;
 
   constructor(private formControlService: FormControlService) { }
 
