@@ -6,5 +6,4 @@
   </flix-generic-button>
   <flix-permissions-table [datagridColumns]="datagridColumns" [datagridRows]="datagridRows" [form]="form"></flix-permissions-table>
 </form>
-<flix-new-role-modal *ngIf="displayNewRoleModal" [form]="form" [display]="displayNewRoleModal" [modalElements]="modalElements"></flix-new-role-modal>
-
+<flix-generic-modal *ngIf="displayNewRoleModal" [form]="form" [modalElements]="modalElements" [display]="displayNewRoleModal"></flix-generic-modal>

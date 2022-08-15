@@ -1,9 +1,14 @@
 /**
- * Derived class representing the control for a clarity datagrid column
+ * Derived class representing a clarity datagrid column
  */
 import { ControlTypes } from './control-types.enum';
-import { GenericFormControl } from './generic-form-control';
+import { DatagridColumnOptions } from './datagrid-column-options';
+import { GenericFormElement } from './generic-form-element';
 
-export class DatagridColumn extends GenericFormControl<string> {
+export class DatagridColumn extends GenericFormElement<string, DatagridColumnOptions> {
   override controlType = ControlTypes.DATAGRID_COLUMN;
+
+  constructor(options: GenericFormElement<string, DatagridColumnOptions>) {
+    super(options);
+ }
 }

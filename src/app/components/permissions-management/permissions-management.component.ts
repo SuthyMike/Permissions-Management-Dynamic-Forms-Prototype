@@ -82,7 +82,7 @@ export class PermissionsManagementComponent implements OnInit, AfterViewInit {
 
   private listenForButtonClicks(): void {
     this.buttonService.getButtonClickStream()
-    // filter on type here perhaps, we only want form value changes
+    // filter on type here perhaps, we only want form value changes - button service is not a good solution though
     .subscribe(values => {
       if (values.roleInput && values.roleInput.length) {
         const newRoleControl =  new DatagridColumn({
